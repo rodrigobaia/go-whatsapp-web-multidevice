@@ -3,6 +3,11 @@ package cmd
 import (
 	"embed"
 	"fmt"
+	"log"
+	"net/http"
+	"os"
+	"strings"
+
 	"github.com/aldinokemal/go-whatsapp-web-multidevice/config"
 	"github.com/aldinokemal/go-whatsapp-web-multidevice/internal/rest"
 	"github.com/aldinokemal/go-whatsapp-web-multidevice/internal/rest/helpers"
@@ -20,10 +25,6 @@ import (
 	"github.com/gofiber/template/html/v2"
 	_ "github.com/mattn/go-sqlite3"
 	"github.com/spf13/cobra"
-	"log"
-	"net/http"
-	"os"
-	"strings"
 )
 
 var (
@@ -54,6 +55,18 @@ func runRest(_ *cobra.Command, _ []string) {
 	if config.AppDebug {
 		config.WhatsappLogLevel = "DEBUG"
 	}
+
+	apidWebhook := os.Getenv("API_WEBHOOK")
+
+	config.WhatsappWebhook = apidWebhook
+
+	myapplication := os.Getenv("ENV_MYAPPLICATION")
+
+	if myapplication == "" {
+		myapplication = "Nebula Zap"
+	}
+
+	config.AppOs = myapplication
 
 	// TODO: Init Rest App
 	//preparing folder if not exist

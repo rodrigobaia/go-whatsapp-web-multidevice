@@ -8,7 +8,7 @@ var (
 	AppVersion             = "v4.17.0"
 	AppPort                = "3000"
 	AppDebug               = false
-	AppOs                  = "AldinoKemal"
+	AppOs                  = "NS-Zap"
 	AppPlatform            = waCompanionReg.DeviceProps_PlatformType(1)
 	AppBasicAuthCredential string
 

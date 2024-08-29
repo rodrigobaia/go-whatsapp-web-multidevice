@@ -10,6 +10,13 @@ services:
     build:
       context: .
       dockerfile: ./docker/golang.Dockerfile
-    restart: 'always'
+    #restart: 'always'
+    volumes:
+      - ./statics:/app/statics
+      - ./storages:/app/storages
     ports:
-      - "3000:3000"
+      - "3500:3000"
+    environment:
+      API_WEBHOOK: https://webhook-test.com/3c9f4be60f658d598affa9a3915b3d17
+      webhook: https://webhook-test.com/3c9f4be60f658d598affa9a3915b3d17
+      ENV_MYAPPLICATION: "Nebula Zap 2.1"
