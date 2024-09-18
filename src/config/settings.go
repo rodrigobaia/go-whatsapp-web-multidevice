@@ -5,7 +5,7 @@ import (
 )
 
 var (
-	AppVersion             = "v4.17.0"
+	AppVersion             = "v4.18.0"
 	AppPort                = "3000"
 	AppDebug               = false
 	AppOs                  = "NS-Zap"
@@ -21,6 +21,7 @@ var (
 
 	WhatsappAutoReplyMessage    string
 	WhatsappWebhook             string
+	WhatsappWebhookSecret             = "secret"
 	WhatsappLogLevel                  = "ERROR"
 	WhatsappSettingMaxFileSize  int64 = 50000000  // 50MB
 	WhatsappSettingMaxVideoSize int64 = 100000000 // 100MB
