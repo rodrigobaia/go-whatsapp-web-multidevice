@@ -16,5 +16,5 @@ services:
     ports:
       - "3500:3000"
     environment:
-      API_WEBHOOK: https://9102-2804-14d-c282-8a33-c19e-898e-ac18-5739.ngrok-free.app/api/Webhook/receive/storeId/1601759d-c5e9-4ec8-a3e9-e8b7da49caf5
-      ENV_MYAPPLICATION: "Nebula Zap 2.1"
+      API_WEBHOOK: https://webhook.site/2480f7d6-9eed-40c3-bf49-415c4990ee5c
+      ENV_MYAPPLICATION: "Nebula Zap 4.21.1"
