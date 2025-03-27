@@ -1,5 +1,10 @@
 # WhatsApp API Multi Device Version
 
+[![Patreon](https://img.shields.io/badge/Support%20on-Patreon-orange.svg)](https://www.patreon.com/c/aldinokemal)  
+**If you're using this tools to generate income, consider supporting its development by becoming a Patreon member!**  
+Your support helps ensure the library stays maintained and receives regular updates. Join our community of supporters today!
+___
+
 ![release version](https://img.shields.io/github/v/release/aldinokemal/go-whatsapp-web-multidevice)
 
 ![Build Image](https://github.com/aldinokemal/go-whatsapp-web-multidevice/actions/workflows/build-docker-image.yaml/badge.svg)
@@ -38,7 +43,8 @@ Now that we support ARM64 for Linux:
   - `--webhook="http://yourwebhook.site/handler"`, or you can simplify
   - `-w="http://yourwebhook.site/handler"`
 - Webhook Secret
-  Our webhook will be sent to you with an HMAC header and a sha256 default key `secret`.<br>
+  Our webhook will be sent to you with an HMAC header and a sha256 default key `secret`.
+  
   You may modify this by using the option below:
   - `--webhook-secret="secret"`
 
@@ -53,6 +59,7 @@ You can configure the application using either command-line flags (shown above) 
 ### Environment Variables
 
 To use environment variables:
+
 1. Copy `.env.example` to `.env` in your project root
 2. Modify the values in `.env` according to your needs
 3. Or set the same variables as system environment variables
@@ -184,6 +191,7 @@ You can fork or edit this source code !
 | ✅       | User Info                    | GET    | /user/info                    |
 | ✅       | User Avatar                  | GET    | /user/avatar                  |
 | ✅       | User Change Avatar           | POST   | /user/avatar                  |
+| ✅       | User Change PushName         | POST   | /user/pushname                |
 | ✅       | User My Groups               | GET    | /user/my/groups               |
 | ✅       | User My Newsletter           | GET    | /user/my/newsletters          |
 | ✅       | User My Privacy Setting      | GET    | /user/my/privacy              |
